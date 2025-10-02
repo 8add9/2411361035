@@ -101,3 +101,30 @@ body {
         margin-bottom: 1rem;
     }
 }
+.rgb-text {
+    animation: rgb-effect 6s linear infinite;
+}
+
+@keyframes rgb-effect {
+    0% {
+        color: #ff0000;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    33% {
+        color: #00ff00;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    66% {
+        color: #0000ff;
+        text-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    }
+    100% {
+        color: #ff0000;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+}
+
+.card:hover .rgb-text {
+    animation: rgb-effect 2s linear infinite;
+    font-weight: bold;
+}
