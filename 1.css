@@ -3,6 +3,46 @@
     --neon-purple: #bc13fe;
     --dark-bg: #0a0a0a;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.highlight {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+}
+
+.glitch {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.nav-items {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
 
 body {
     background: radial-gradient(circle at top right, #1a1a2e, var(--dark-bg)) !important;
