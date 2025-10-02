@@ -23,7 +23,6 @@ body{
     overflow-x:hidden;
 }
 
-/* subtle animated grid background */
 body::before{
     content:"";
     position:fixed;
@@ -97,7 +96,6 @@ body::before{
     transform:translateY(-2px);
 }
 
-/* hero */
 .hero-section{
     text-align:center;
     padding:80px 20px;
@@ -160,7 +158,6 @@ body::before{
     to{opacity:1; transform:translateY(0)}
 }
 
-/* cards */
 .tech-cards{
     display:flex;
     justify-content:center;
