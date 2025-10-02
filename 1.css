@@ -4,42 +4,39 @@
     --dark-bg: #0a0a0a;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 0.5px;
 }
 
 .logo {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-.highlight {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 500;
+.nav-items {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
 }
 
 .glitch {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
-.nav-items {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
+.animated-text {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
 }
 
 .card h3 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
 }
 
 .card p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
     line-height: 1.6;
 }
