@@ -92,7 +92,6 @@ body {
     }
 }
 
-/* 響應式調整 */
 @media (max-width: 768px) {
     .glitch {
         font-size: 2rem;
