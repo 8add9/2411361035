@@ -139,7 +139,7 @@ body {
     }
 }
 .rgb-text {
-    animation: rgb-effect 30s linear infinite;
+    animation: rgb-effect 60s linear infinite;
 }
 
 @keyframes rgb-effect {
@@ -162,7 +162,7 @@ body {
 }
 
 .card:hover .rgb-text {
-    animation: rgb-effect 2s linear infinite;
+    animation: rgb-effect 30s linear infinite;
     font-weight: bold;
 }
 .cyber-glitch {
