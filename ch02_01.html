@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-<title>hehe</title>
-<style>
-    h1{
-        font-size: 60px;
-        font-style: italic;
-    }
-</style>
+<html lang="cht">
 <head>
-<link rel="stylesheet" href="1.css" />
+    <meta charset="UTF-8">
+    <title>somethings</title>
+    <link rel="stylesheet" href="1.css">
 </head>
+
 <body>
-    <h1>ez page</h1>
-    <h2>test</h2>
-    <div id="cc">who are you?</div>
+    <div class="container">
+        <nav class="nav-bar">
+            <div class="logo">PORN<span class="highlight">HUB</span></div>
+            <ul class="nav-items">
+                <li>homepage</li>
+                <li>something</li>
+                <li>something</li>
+                <li>something</li>
+            </ul>
+        </nav>
+
+        <main class="hero-section">
+            <h1 class="glitch" data-text="something">something</h1>
+            <p class="animated-text">something・something・something</p>
+            <div class="tech-cards">
+                <div class="card">
+                    <h3>something</h3>
+                    <p>something</p>
+                </div>
+                <div class="card">
+                    <h3>something</h3>
+                    <p>something</p>
+                </div>
+                <div class="card">
+                    <h3>something</h3>
+                    <p>something</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 </body>
+</html>
