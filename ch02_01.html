@@ -89,7 +89,7 @@
         if (gayText.classList.contains("exploding")) return;
         gayText.classList.add("exploding");
     
-        const card = gayText.closest(".card");
+        const card = gayText.closest(".card-body")?.parentElement;
         if (card) {
           card.classList.add("card-explode");
           setTimeout(() => card.classList.remove("card-explode"), 600);
