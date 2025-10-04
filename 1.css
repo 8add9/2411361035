@@ -362,7 +362,10 @@ body {
     opacity: 0;
     pointer-events: none;
 }
-
+.fullscreen-glitch-overlay.glitch-active {
+  opacity: 1;
+  pointer-events: auto;
+}
 .loading-text {
     text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #ff00ff;
     animation: loading-glitch 0.1s steps(2, end) infinite;
