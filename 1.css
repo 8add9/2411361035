@@ -20,7 +20,9 @@ body {
     to { text-shadow: 0 0 15px var(--neon-blue), 0 0 20px rgba(0, 247, 255, 0.5); }
 }
 .navbar-nav li:nth-child(2) .nav-link {
+    display: inline-block;
     animation: rgb-effect 30s linear infinite;
+    will-change: color, text-shadow;
 }
 .navbar-nav li:nth-child(2) .nav-link:hover {
     animation: jitter 0.2s 3;
