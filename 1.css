@@ -440,3 +440,30 @@ body {
     80% { clip-path: inset(5% 0 90% 0); }
     100% { clip-path: inset(0 0 0 0); }
 }
+.exploding {
+  position: relative;
+  display: inline-block;
+}
+
+.explosion-piece {
+  display: inline-block;
+  animation: explode 0.8s ease-out forwards;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff;
+  opacity: 1;
+}
+
+@keyframes explode {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(var(--x), var(--y)) rotate(var(--r));
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) rotate(var(--r));
+    opacity: 0;
+  }
+}
