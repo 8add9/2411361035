@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <div class="card">
+                    <div class="card" id="genshinCard">
                         <div class="card-body">
                             <h3 class="rgb-text">原神<br></h3>
                             <p class="rgb-text">啟動</p>
@@ -184,14 +184,17 @@
         const overlayImg = document.createElement('div');
         overlayImg.className = 'fullscreen-overlay';
         document.body.appendChild(overlayImg);
-        const genshinCard = document.querySelector('.col-12.col-md-4:nth-child(3) .card');
+        const genshinCard = document.querySelector('#genshinCard');
         if (genshinCard) {
             genshinCard.addEventListener('click', () => {
-                overlayImg.style.backgroundImage = ''; 
-                overlayImg.classList.add('active');
+                        overlayImg.style.backgroundImage = '';
+                        overlayImg.style.transform = 'rotate(0deg)';
+                        overlayImg.classList.add('active');
+                        overlayImg.style.opacity = '1';
                 setTimeout(() => {
                     overlayImg.style.backgroundImage = 'url("1.jpg")';
                     overlayImg.style.transition = 'opacity 2s ease';
+                    overlayImg.style.transform = 'rotate(90deg)';
                 }, 1000);
             });
         }
