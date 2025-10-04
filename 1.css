@@ -11,8 +11,29 @@ body {
     background: radial-gradient(circle at top right, #1a1a2e, var(--dark-bg)) !important;
     color: #fff !important;
 }
-
-
+.navbar-nav li:nth-child(1) .nav-link:hover {
+    color: var(--neon-blue) !important;
+    animation: glow-pulse 1.5s infinite alternate;
+}
+@keyframes glow-pulse {
+    from { text-shadow: 0 0 5px var(--neon-blue); }
+    to { text-shadow: 0 0 15px var(--neon-blue), 0 0 20px rgba(0, 247, 255, 0.5); }
+}
+.navbar-nav li:nth-child(2) .nav-link:hover {
+    animation: jitter 0.2s 3;
+}
+@keyframes jitter {
+    0% { transform: translateX(0px); text-shadow: none; }
+    33% { transform: translateX(1px); color: #00fffc; }
+    66% { transform: translateX(-1px); color: #fc00ff; }
+    100% { transform: translateX(0px); color: #fff; }
+}
+.navbar-nav li:nth-child(3) .nav-link::after {
+    background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
+}
+.navbar-nav li:nth-child(3) .nav-link:hover::after {
+    width: 100%;
+}
 .logo {
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 700;
