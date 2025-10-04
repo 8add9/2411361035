@@ -77,63 +77,30 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mouseover', () => {
-                card.style.transform = 'translateY(-10px)';
-            });
-            card.addEventListener('mouseout', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
-        const gayText = document.getElementById('gayText');
-        const gayCard = document.getElementById('gayCard');
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseover', () => card.style.transform = 'translateY(-10px)');
+        card.addEventListener('mouseout',  () => card.style.transform = 'translateY(0)');
+      });
+      const gayText = document.getElementById('gayText');
+      if (!gayText) {
+        console.warn('gayText not found!');
+        return;
+      }
+      gayText.style.cursor = 'pointer';
+      const gayCard = gayText.closest('.card');
+      if (gayCard) {
+        gayCard.addEventListener('mouseenter', () => gayText.classList.add('gay-pride-effect'));
+        gayCard.addEventListener('mouseleave', () => gayText.classList.remove('gay-pride-effect'));
+      }
+      gayText.addEventListener('click', (e) => {
+        e.stopPropagation();
+        gayText.classList.toggle('gay-pride-effect');
+      });
     
-        if (gayText) {
-            gayCard.addEventListener('mouseenter', () => {
-                gayText.classList.add('gay-pride-effect');
-            });
-            gayCard.addEventListener('mouseleave', () => {
-                gayText.classList.remove('gay-pride-effect');
-            });
-            gayCard.addEventListener('click', () => {
-                gayText.classList.toggle('gay-pride-effect');
-            });
-        }
-        const overlay = document.createElement('div');
-        overlay.className = 'fullscreen-glitch-overlay';
-        overlay.innerHTML = '<span class="loading-text">你以為你會看到甚麼</span>';
-        document.body.appendChild(overlay);
-    
-        const rankLink = document.getElementById('rank-link');
-    
-        if (rankLink) {
-            rankLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                overlay.classList.add('glitch-overlay-active');
-                setTimeout(() => {
-                    overlay.classList.remove('glitch-overlay-active');
-                }, 1500);
-            });
-        }
-
-        const staticOverlay = document.createElement('div');
-        staticOverlay.className = 'glitch-static-scan';
-        document.body.appendChild(staticOverlay);
-        
-        const topVideosLink = document.getElementById('top-videos-link');
-        
-        if (topVideosLink) {
-            topVideosLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                staticOverlay.classList.add('static-active');
-                const duration = 1200; 
-        
-                setTimeout(() => {
-                    staticOverlay.classList.remove('static-active');
-                    window.open(topVideosLink.querySelector('a').href, '_blank');
-                }, duration);
-            });
-        }
+      console.log('gay handlers attached:', { gayText, gayCard });
+    });
     </script>
+
 </body>
 </html>
