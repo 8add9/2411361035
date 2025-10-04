@@ -80,29 +80,40 @@
     document.addEventListener("DOMContentLoaded", () => {
       const gayText = document.getElementById("gayText");
       if (!gayText) return;
+    
       gayText.style.cursor = "pointer";
+      gayText.style.position = "relative";
+      gayText.style.display = "inline-block";
+    
       gayText.addEventListener("click", () => {
         if (gayText.classList.contains("exploding")) return;
-    
         gayText.classList.add("exploding");
     
-        const text = gayText.textContent;
-        gayText.textContent = ""; 
+        const card = gayText.closest(".card");
+        if (card) {
+          card.classList.add("card-explode");
+          setTimeout(() => card.classList.remove("card-explode"), 500);
+        }
     
-        [...text].forEach((char, i) => {
+        const text = gayText.textContent;
+        gayText.textContent = "";
+    
+        [...text].forEach((char) => {
           const span = document.createElement("span");
           span.textContent = char;
           span.className = "explosion-piece";
           const angle = Math.random() * 2 * Math.PI;
-          const distance = 60 + Math.random() * 60;
+          const distance = 80 + Math.random() * 60;
           const x = Math.cos(angle) * distance;
           const y = Math.sin(angle) * distance;
           const rot = Math.random() * 720 - 360;
           span.style.setProperty("--x", `${x}px`);
           span.style.setProperty("--y", `${y}px`);
           span.style.setProperty("--r", `${rot}deg`);
+          span.style.display = "inline-block";
           gayText.appendChild(span);
         });
+    
         setTimeout(() => {
           gayText.textContent = text;
           gayText.classList.remove("exploding");
