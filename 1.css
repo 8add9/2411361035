@@ -355,7 +355,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.95);
-    z-index: 9999;
+    z-index: 99999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -364,12 +364,11 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease-out;
+    visibility: hidden;
 }
 
 .fullscreen-glitch-overlay.glitch-overlay-active {
-    opacity: 1;
-    pointer-events: auto;
-    animation: fade-in-out 1.5s forwards;
+    visibility: visible;
 }
 
 .loading-text {
