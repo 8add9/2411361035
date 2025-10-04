@@ -105,17 +105,19 @@
         overlay.innerHTML = '<span class="loading-text">你點進來幹嘛</span>';
         document.body.appendChild(overlay);
         
-        const rankLink = document.getElementById('rank-link');
+        const rankLink = document.querySelector('.navbar-nav li:nth-child(2) .nav-link');
+        
         if (rankLink) {
             rankLink.addEventListener('click', (e) => {
                 e.preventDefault();
                 overlay.classList.add('glitch-overlay-active');
+                overlay.style.opacity = '1';
                 setTimeout(() => {
+                    overlay.style.opacity = '0';
                     overlay.classList.remove('glitch-overlay-active');
-                }, 1500); 
+                }, 1500);
             });
         }
-
         const staticOverlay = document.createElement('div');
         staticOverlay.className = 'glitch-static-scan';
         document.body.appendChild(staticOverlay);
