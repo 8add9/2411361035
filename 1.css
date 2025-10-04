@@ -512,4 +512,24 @@ body {
   80% { transform: translate(3px, -4px) rotate(1deg); }
   100% { transform: translate(0, 0) rotate(0); }
 }
-
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999;
+    transition: opacity 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+.fullscreen-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
