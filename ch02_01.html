@@ -110,9 +110,9 @@
         if (rankLink) {
             rankLink.addEventListener('click', (e) => {
                 e.preventDefault();
-                overlay.classList.add('glitch-active');
+                overlay.classList.add('glitch-overlay-active');
                 setTimeout(() => {
-                    overlay.classList.remove('glitch-active');
+                    overlay.classList.remove('glitch-overlay-active');
                 }, 1500); 
             });
         }
