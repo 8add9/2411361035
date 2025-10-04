@@ -3,10 +3,15 @@
     --neon-purple: #bc13fe;
     --dark-bg: #0a0a0a;
 }
+
 body {
     font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 0.5px;
+    
+    background: radial-gradient(circle at top right, #1a1a2e, var(--dark-bg)) !important;
+    color: #fff !important;
 }
+
 
 .logo {
     font-family: 'Noto Sans TC', sans-serif;
@@ -28,6 +33,7 @@ body {
 .animated-text {
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
+    text-align: center; 
 }
 
 .card h3 {
@@ -39,12 +45,6 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
     line-height: 1.6;
-}
-
-body {
-    background: radial-gradient(circle at top right, #1a1a2e, var(--dark-bg)) !important;
-    color: #fff !important;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 .tech-brand {
@@ -83,12 +83,6 @@ body {
     width: 100%;
 }
 
-.glitch {
-    position: relative;
-    text-shadow: 0 0 10px var(--neon-blue);
-    animation: glow 2s ease-in-out infinite;
-}
-
 @keyframes glow {
     0%, 100% { text-shadow: 0 0 10px var(--neon-blue); }
     50% { text-shadow: 0 0 20px var(--neon-purple), 0 0 30px var(--neon-blue); }
@@ -102,7 +96,6 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-10px);
     box-shadow: 0 0 20px rgba(0, 247, 255, 0.3) !important;
     border: 1px solid var(--neon-blue) !important;
 }
@@ -116,6 +109,7 @@ body {
 .animated-text {
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s; 
 }
 
 @keyframes fadeInUp {
@@ -130,14 +124,20 @@ body {
 }
 
 @media (max-width: 768px) {
-    .glitch {
+    .cyber-glitch { 
         font-size: 2rem;
+        text-align: center;
+    }
+    
+    .hero-section {
+        padding-top: 2rem;
     }
     
     .tech-cards .col-md-4 {
         margin-bottom: 1rem;
     }
 }
+
 .rgb-text {
     animation: rgb-effect 60s linear infinite;
 }
@@ -165,14 +165,19 @@ body {
     animation: rgb-effect 30s linear infinite;
     font-weight: bold;
 }
+
+
 .cyber-glitch {
     font-size: 4em;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
+    text-align: center; 
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     text-shadow: 0.05em 0 0 #00fffc,
-                -0.03em -0.04em 0 #fc00ff,
-                0.025em 0.04em 0 #fffc00;
+                 -0.03em -0.04em 0 #fc00ff,
+                 0.025em 0.04em 0 #fffc00;
     animation: glitch 4s ease-in-out infinite;
 }
 
@@ -203,38 +208,38 @@ body {
 @keyframes glitch {
     0% {
         text-shadow: 0.05em 0 0 #00fffc,
-                    -0.03em -0.04em 0 #fc00ff,
-                    0.025em 0.04em 0 #fffc00;
+                     -0.03em -0.04em 0 #fc00ff,
+                     0.025em 0.04em 0 #fffc00;
     }
     15% {
         text-shadow: 0.05em 0 0 #00fffc,
-                    -0.03em -0.04em 0 #fc00ff,
-                    0.025em 0.04em 0 #fffc00;
+                     -0.03em -0.04em 0 #fc00ff,
+                     0.025em 0.04em 0 #fffc00;
     }
     16% {
         text-shadow: -0.05em -0.025em 0 #00fffc,
-                    0.025em 0.035em 0 #fc00ff,
-                    -0.05em -0.05em 0 #fffc00;
+                     0.025em 0.035em 0 #fc00ff,
+                     -0.05em -0.05em 0 #fffc00;
     }
     49% {
         text-shadow: -0.05em -0.025em 0 #00fffc,
-                    0.025em 0.035em 0 #fc00ff,
-                    -0.05em -0.05em 0 #fffc00;
+                     0.025em 0.035em 0 #fc00ff,
+                     -0.05em -0.05em 0 #fffc00;
     }
     50% {
         text-shadow: 0.05em 0.035em 0 #00fffc,
-                    0.03em 0 0 #fc00ff,
-                    0 -0.04em 0 #fffc00;
+                     0.03em 0 0 #fc00ff,
+                     0 -0.04em 0 #fffc00;
     }
     99% {
         text-shadow: 0.05em 0.035em 0 #00fffc,
-                    0.03em 0 0 #fc00ff,
-                    0 -0.04em 0 #fffc00;
+                     0.03em 0 0 #fc00ff,
+                     0 -0.04em 0 #fffc00;
     }
     100% {
         text-shadow: 0.05em 0 0 #00fffc,
-                    -0.03em -0.04em 0 #fc00ff,
-                    0.025em 0.04em 0 #fffc00;
+                     -0.03em -0.04em 0 #fc00ff,
+                     0.025em 0.04em 0 #fffc00;
     }
 }
 
@@ -272,4 +277,8 @@ body {
     100% {
         transform: translate(0);
     }
+}
+
+.hero-section {
+    padding: 3rem 0;
 }
