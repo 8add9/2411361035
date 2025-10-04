@@ -282,3 +282,13 @@ body {
 .hero-section {
     padding: 3rem 0;
 }
+.card .ratio {
+    border-top-left-radius: var(--bs-card-border-radius, 0.375rem);
+    border-top-right-radius: var(--bs-card-border-radius, 0.375rem);
+    overflow: hidden;
+}
+
+.card:hover .video-wrapper {
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.7);
+    border: 1px solid var(--neon-blue);
+}
