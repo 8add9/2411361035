@@ -19,6 +19,9 @@ body {
     from { text-shadow: 0 0 5px var(--neon-blue); }
     to { text-shadow: 0 0 15px var(--neon-blue), 0 0 20px rgba(0, 247, 255, 0.5); }
 }
+.navbar-nav li:nth-child(2) .nav-link {
+    animation: rgb-effect 30s linear infinite;
+}
 .navbar-nav li:nth-child(2) .nav-link:hover {
     animation: jitter 0.2s 3;
 }
@@ -160,7 +163,7 @@ body {
 }
 
 .rgb-text {
-    animation: rgb-effect 60s linear infinite;
+    animation: rgb-effect 30s linear infinite;
 }
 
 @keyframes rgb-effect {
