@@ -384,3 +384,53 @@ body {
     90% { opacity: 0; clip-path: inset(0 100% 0 0); }
     100% { opacity: 0; display: none; }
 }
+.glitch-static-scan {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 9998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
+    overflow: hidden;
+}
+
+.glitch-static-scan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.5) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    opacity: 0.5;
+    animation: scan-line 6s linear infinite;
+}
+
+@keyframes scan-line {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+.static-active {
+    opacity: 1;
+    animation: static-flicker 0.15s infinite;
+}
+
+@keyframes static-flicker {
+    0% { clip-path: inset(0 0 95% 0); }
+    20% { clip-path: inset(0 0 0 0); }
+    40% { clip-path: inset(90% 0 0 0); }
+    60% { clip-path: inset(0 0 0 0); }
+    80% { clip-path: inset(5% 0 90% 0); }
+    100% { clip-path: inset(0 0 0 0); }
+}
