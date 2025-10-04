@@ -99,6 +99,22 @@
                 gayText.classList.toggle('gay-pride-effect');
             });
         }
+        const overlay = document.createElement('div');
+        overlay.className = 'fullscreen-glitch-overlay';
+        overlay.innerHTML = '<span class="loading-text">ACCESSING RANK DATA...</span>';
+        document.body.appendChild(overlay);
+        
+        const rankLink = document.getElementById('rank-link');
+        
+        if (rankLink) {
+            rankLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                overlay.classList.add('glitch-active');
+                setTimeout(() => {
+                    overlay.classList.remove('glitch-active');
+                }, 1500); 
+            });
+        }
     </script>
 </body>
 </html>
