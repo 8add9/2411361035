@@ -340,12 +340,14 @@ body {
         text-shadow: 0 0 5px #4b0082, 0 0 10px #ff0000;
     }
 }
+
 .gay-pride-effect {
     animation: pride-glow 0.8s linear infinite alternate, rgb-effect 10s linear infinite;
     font-weight: 700 !important;
     transform: scale(1.1);
     transition: all 0.2s ease-out;
 }
+
 .fullscreen-glitch-overlay {
     position: fixed;
     top: 0;
@@ -361,11 +363,15 @@ body {
     color: #ff00ff;
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.2s ease-out;
 }
-.fullscreen-glitch-overlay.glitch-active {
-  opacity: 1;
-  pointer-events: auto;
+
+.fullscreen-glitch-overlay.glitch-overlay-active {
+    opacity: 1;
+    pointer-events: auto;
+    animation: fade-in-out 1.5s forwards;
 }
+
 .loading-text {
     text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #ff00ff;
     animation: loading-glitch 0.1s steps(2, end) infinite;
@@ -376,17 +382,14 @@ body {
     100% { transform: translate(1px, -1px); }
 }
 
-.glitch-active {
-    animation: fade-in-out 1.5s forwards;
+@keyframes fade-in-out {
+    0% { opacity: 0; filter: contrast(200%) brightness(1.2) blur(2px); }
+    10% { opacity: 1; transform: skew(2deg); }
+    50% { opacity: 1; filter: contrast(150%) saturate(150%); }
+    90% { opacity: 0; transform: scale(1.05) skew(-1deg); }
+    100% { opacity: 0; filter: blur(3px); }
 }
 
-@keyframes fade-in-out {
-    0% { opacity: 0; }
-    10% { opacity: 1; clip-path: inset(0 0 0 0); }
-    80% { opacity: 1; }
-    90% { opacity: 0; clip-path: inset(0 100% 0 0); }
-    100% { opacity: 0; display: none; }
-}
 .glitch-static-scan {
     position: fixed;
     top: 0;
