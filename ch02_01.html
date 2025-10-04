@@ -92,7 +92,7 @@
         const card = gayText.closest(".card");
         if (card) {
           card.classList.add("card-explode");
-          setTimeout(() => card.classList.remove("card-explode"), 500);
+          setTimeout(() => card.classList.remove("card-explode"), 600);
         }
     
         const text = gayText.textContent;
@@ -110,7 +110,6 @@
           span.style.setProperty("--x", `${x}px`);
           span.style.setProperty("--y", `${y}px`);
           span.style.setProperty("--r", `${rot}deg`);
-          span.style.display = "inline-block";
           gayText.appendChild(span);
         });
     
