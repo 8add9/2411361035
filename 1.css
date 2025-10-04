@@ -292,3 +292,36 @@ body {
     box-shadow: 0 0 10px rgba(0, 247, 255, 0.7);
     border: 1px solid var(--neon-blue);
 }
+
+@keyframes pride-glow {
+    0%, 100% {
+        color: #ff0000;
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff8000;
+    }
+    16% {
+        color: #ff8000;
+        text-shadow: 0 0 5px #ff8000, 0 0 10px #ffff00;
+    }
+    33% {
+        color: #ffff00;
+        text-shadow: 0 0 5px #ffff00, 0 0 10px #00ff00;
+    }
+    50% {
+        color: #00ff00;
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #0000ff;
+    }
+    66% {
+        color: #0000ff;
+        text-shadow: 0 0 5px #0000ff, 0 0 10px #4b0082;
+    }
+    83% {
+        color: #4b0082;
+        text-shadow: 0 0 5px #4b0082, 0 0 10px #ff0000;
+    }
+}
+.gay-pride-effect {
+    animation: pride-glow 0.8s linear infinite alternate, rgb-effect 10s linear infinite;
+    font-weight: 700 !important;
+    transform: scale(1.1);
+    transition: all 0.2s ease-out;
+}
