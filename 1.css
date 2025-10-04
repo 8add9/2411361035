@@ -443,27 +443,34 @@ body {
 .exploding {
   position: relative;
   display: inline-block;
+  overflow: visible;
+  will-change: transform, opacity;
 }
 
 .explosion-piece {
   display: inline-block;
-  animation: explode 0.8s ease-out forwards;
-  color: #ff00ff;
-  text-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff;
+  position: relative;
+  font-weight: 700;
+  color: #ff4df0;
+  text-shadow: 0 0 10px #ff4df0, 0 0 20px #00f7ff;
+  transform-origin: center center;
+  animation: explode 0.8s cubic-bezier(0.3, 1, 0.3, 1) forwards;
   opacity: 1;
+  will-change: transform, opacity;
 }
 
 @keyframes explode {
   0% {
-    transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0) scale(1) rotate(0);
     opacity: 1;
   }
-  80% {
-    transform: translate(var(--x), var(--y)) rotate(var(--r));
-    opacity: 0.8;
+  60% {
+    transform: translate(var(--x), var(--y)) scale(1.2) rotate(var(--r));
+    opacity: 1;
   }
   100% {
-    transform: translate(var(--x), var(--y)) rotate(var(--r));
+    transform: translate(var(--x), var(--y)) scale(1.5) rotate(var(--r));
     opacity: 0;
   }
 }
+
