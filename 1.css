@@ -163,25 +163,26 @@ body {
 }
 
 .rgb-text {
-    animation: rgb-effect 30s linear infinite;
+    display: inline-block;
+    animation: rgb-effect 3s linear infinite;
+    -webkit-animation: rgb-effect 3s linear infinite;
+    will-change: filter, color;
 }
 
 @keyframes rgb-effect {
     0% {
         color: #ff0000;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        filter: hue-rotate(0deg);
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
     }
-    33% {
-        color: #00ff00;
-        text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    }
-    66% {
-        color: #0000ff;
-        text-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    50% {
+        filter: hue-rotate(180deg);
+        text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
     }
     100% {
         color: #ff0000;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        filter: hue-rotate(360deg);
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
     }
 }
 
