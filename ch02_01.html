@@ -187,16 +187,15 @@
         const genshinCard = document.querySelector('#genshinCard');
         if (genshinCard) {
             genshinCard.addEventListener('click', () => {
-                        overlayImg.style.backgroundImage = '';
-                        overlayImg.style.transform = 'rotate(0deg)';
-                        overlayImg.classList.add('active');
-                        overlayImg.style.opacity = '1';
-                setTimeout(() => {
-                    overlayImg.style.backgroundImage = 'url("1.jpg")';
-                    overlayImg.style.transition = 'opacity 2s ease';
-                    overlayImg.style.transform = 'rotate(90deg)';
-                }, 1000);
-            });
+                    overlayImg.style.backgroundImage = '';
+                    overlayImg.classList.add('active');
+                    setTimeout(() => {
+                        overlayImg.style.backgroundImage = 'url("1.jpg")';
+                    }, 1000);
+                    setTimeout(() => {
+                        overlayImg.classList.remove('active');
+                    }, 5000);
+                });
         }
     </script>
 </body>
